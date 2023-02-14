@@ -1,0 +1,40 @@
+from enum import Enum
+
+
+class EventCode(str, Enum):
+    EVENT_101 = "EVENT_101"
+    EVENT_102 = "EVENT_102"
+    EVENT_201 = "EVENT_201"
+    EVENT_202 = "EVENT_202"
+    EVENT_203 = "EVENT_203"
+    EVENT_204 = "EVENT_204"
+    EVENT_205 = "EVENT_205"
+    EVENT_206 = "EVENT_206"
+    EVENT_301 = "EVENT_301"
+    EVENT_302 = "EVENT_302"
+    EVENT_304 = "EVENT_304"
+    EVENT_306 = "EVENT_306"
+    EVENT_307 = "EVENT_307"
+    EVENT_308 = "EVENT_308"
+    EVENT_309 = "EVENT_309"
+    EVENT_401 = "EVENT_401"
+    EVENT_402 = "EVENT_402"
+    EVENT_403 = "EVENT_403"
+    EVENT_404 = "EVENT_404"
+    EVENT_405 = "EVENT_405"
+    EVENT_406 = "EVENT_406"
+    EVENT_407 = "EVENT_407"
+    EVENT_408 = "EVENT_408"
+    EVENT_409 = "EVENT_409"
+    EVENT_411 = "EVENT_411"
+    EVENT_412 = "EVENT_412"
+    EVENT_413 = "EVENT_413"
+    EVENT_414 = "EVENT_414"
+    EVENT_415 = "EVENT_415"
+    EVENT_416 = "EVENT_416"
+    EVENT_417 = "EVENT_417"
+    EVENT_418 = "EVENT_418"
+    EVENT_419 = "EVENT_419"
+
+    def __str__(self) -> str:
+        return str(self.value)

@@ -1,0 +1,18 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "Convert api definitions to OpenApi v3",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "preinstall": "git submodule update --remote --merge",
+    "convert": "npm run preinstall && rm -rf models && mkdir models && node index.js",
+    "test": "npm test"
+  },
+  "author": "milyord",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^8.1.0",
+    "swagger2openapi": "^7.0.8"
+  }
+}

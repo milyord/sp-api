@@ -1,0 +1,15 @@
+{% for endpoint_collection in endpoint_collections_by_tag.values()  %}
+  {% for endpoint in endpoint_collection.endpoints %}
+from .api.{{ endpoint_collection.tag }} import {{ utils.snake_case(endpoint.name) }}
+  {% endfor %}
+{% endfor %}
+from .client import Client
+
+__all__ = (
+    "Client",
+{% for endpoint_collection in endpoint_collections_by_tag.values()  %}
+  {% for endpoint in endpoint_collection.endpoints %}
+    "{{ utils.snake_case(endpoint.name) }}",
+  {% endfor %}
+{% endfor %}
+)

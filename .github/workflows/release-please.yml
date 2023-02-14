@@ -17,7 +17,7 @@ jobs:
           release-type: python
           package-name: sp-api
           default-branch: main
-          bootstrap-sha: fc18f42556d5dd2043ccfb14ea83bc1986bd5320
+          bootstrap-sha: 93fc5e9fc0290ae5765bd94e530ec73228ebb866
       - name: Checkout repository
         uses: actions/checkout@v3
         if: steps.release.outputs.release_created

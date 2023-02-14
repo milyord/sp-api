@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "sp-api"
+version = "0.1.0"
+description = "Amazon Selling Partner API"
+authors = ["Mil Yord <872264+milyord@users.noreply.github.com>"]
+license = "ISC"
+readme = "README.md"
+repository = "https://github.com/milyord/sp-api"
+keywords = ["amazon", "selling", "partner", "api", "client", "sdk"]
+packages = [{ include = "sp" }]
+
+[tool.poetry.scripts]
+generate = "generator:start"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.23.3"
+httpx-auth-awssigv4 = "^0.1.4"
+boto3 = "^1.26.57"
+
+[tool.poetry.group.dev.dependencies]
+openapi-python-client = "^0.13.1"
+isort = "^5.11.4"
+black = "^22.12.0"
+autoflake = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.black]
+line-length = 120
+target-version = ["py310", "py311"]
+exclude = "/(.git|.venv|.mypy_cache)/"
+
+[tool.isort]
+line_length = 120
+profile = "black"
